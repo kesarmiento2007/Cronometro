@@ -1,0 +1,102 @@
+/* Variables */
+
+:root{
+    --blanco: #FFFFFF;
+    --gris: #242320;
+    --verde: #30E314;
+    --rojo: #F90606;
+    --naranja: #FA4805;
+}
+
+/* Globales */
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Diseño */
+
+body{
+    background-color: var(--gris);
+}
+
+.cronometro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+}
+@media (min-width: 490px){
+    .cronometro{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 768px){
+    .cronometro{
+        margin: 5rem auto;
+    }
+}
+
+.tiempo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 6rem;
+    color: var(--blanco);
+}
+@media (min-width: 490px){
+    .tiempo{
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1rem;
+        font-size: 6rem;
+    }
+}
+.ms{
+    font-size: 2.5rem;
+}
+@media (min-width: 490px){
+    .ms{
+        font-size: 3.5rem;
+    }
+}
+
+.botones{
+    display: flex;
+    gap: 3rem;
+}
+
+.boton{
+    display: flex;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 50%;
+    padding: 1rem;
+    color: var(--blanco);
+    cursor: pointer;
+}
+.boton:active{
+    transform: scale(.9);
+}
+.icono{
+    font-size: 3rem;
+}
+
+.reiniciar{
+    background-color: var(--naranja);
+}
+.play{
+    background-color: var(--verde);
+}
+.pausa{
+    background-color: var(--rojo);
+}
